@@ -89,11 +89,18 @@ export default async function Chapter({ params }: Props) {
     languageSettings.translationAuthor.id,
   );
 
-  if (!chapterData) {
-    return <NotFound hint={`Chapter ${chapterNumber} not found`} />;
-  }
-
   const translations = await getTranslations(locale);
+
+  if (!chapterData) {
+    return (
+      <NotFound
+        translations={translations}
+        locale={locale}
+        hint={chapterNumber}
+        isChapter={true}
+      />
+    );
+  }
 
   return (
     <>
