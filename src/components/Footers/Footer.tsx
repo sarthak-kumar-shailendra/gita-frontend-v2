@@ -25,8 +25,8 @@ const getNavigation = (translate: Translate) => ({
     },
     {
       name: translate("Bhagavad Gita AI"),
-      href: "https://bhagavadgita.ai",
-      newTab: true,
+      href: "/gitagpt",
+      newTab: false,
     },
     {
       name: translate("Acknowledgements"),
@@ -46,8 +46,8 @@ const getNavigation = (translate: Translate) => ({
     },
     {
       name: translate("Donate"),
-      href: "https://opencollective.com/the-gita-initiative",
-      newTab: true,
+      href: "/donate",
+      newTab: false,
     },
     {
       name: "API",
@@ -89,7 +89,7 @@ const getNavigation = (translate: Translate) => ({
           className={className}
           aria-hidden={ariaHidden}
         >
-          <path d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"/>
+          <path d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z" />
         </svg>
       ),
     },
@@ -289,14 +289,13 @@ const Footer = (props: Props) => {
                         <Menu.Item>
                           {({ active }) => (
                             <a
-                              href="https://opencollective.com/the-gita-initiative"
+                              href="/donate"
                               className={classNames(
                                 active
                                   ? "bg-gray-100 text-gray-900"
                                   : "text-gray-700 dark:text-gray-400",
                                 "block px-4 py-2 text-sm",
                               )}
-                              target="_blank"
                             >
                               {translate("Donate")}
                             </a>

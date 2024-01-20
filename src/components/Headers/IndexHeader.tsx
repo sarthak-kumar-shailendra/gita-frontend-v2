@@ -111,6 +111,8 @@ const chapters = [
 const mobileNav = [
   { name: "Quotes", href: "/bhagavad-gita-quotes", current: false },
   { name: "About Gita", href: "/about", current: false },
+  { name: "Gita AI", href: "/gitagpt", current: false },
+  { name: "Donate", href: "/donate", current: false },
 ];
 
 type Props = {
@@ -235,6 +237,18 @@ export default function IndexHeader({ locale, translate }: Props) {
                 className="text-base font-medium text-black hover:text-gray-500 focus:outline-none dark:text-white"
               >
                 {translate("About Gita")}
+              </LinkWithLocale>
+              <LinkWithLocale
+                href="/gitagpt"
+                className="text-base font-medium text-black hover:text-gray-500 focus:outline-none dark:text-white"
+              >
+                {translate("Gita AI")}
+              </LinkWithLocale>
+              <LinkWithLocale
+                href="/donate"
+                className="text-base font-medium text-black hover:text-gray-500 focus:outline-none dark:text-white"
+              >
+                {translate("Donate")}
               </LinkWithLocale>
               {/* {!loggedIn ? (
                 <Popover className="relative">
@@ -371,7 +385,7 @@ export default function IndexHeader({ locale, translate }: Props) {
                         </svg>
                       </button>
                       <input
-                        className="h-10 w-max rounded-lg border border-gray-300 bg-white px-8 pr-16 text-sm focus:outline-none dark:bg-dark-100 dark:placeholder:text-white dark:text-white"
+                        className="h-10 w-max rounded-lg border border-gray-300 bg-white px-8 pr-16 text-sm focus:outline-none dark:bg-dark-100 dark:text-white dark:placeholder:text-white"
                         type="search"
                         name="search"
                         placeholder="Search"
